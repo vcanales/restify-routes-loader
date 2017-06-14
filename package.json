@@ -4,6 +4,8 @@
   "description": "Bulk load your routes",
   "main": "dist/index.js",
   "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint .",
     "test": "tape -r babel-register test/**/*.spec.js"
   },
   "repository": {
