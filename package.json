@@ -1,0 +1,34 @@
+{
+  "name": "restify-routes-loader",
+  "version": "0.0.1",
+  "description": "Bulk load your routes",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tape -r babel-register test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vcanales/restify-routes-loader.git"
+  },
+  "keywords": [
+    "retify",
+    "routes"
+  ],
+  "author": "Vicente Canales <vicente@pageload.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vcanales/restify-routes-loader/issues"
+  },
+  "homepage": "https://github.com/vcanales/restify-routes-loader#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "tape": "^4.6.3"
+  }
+}
