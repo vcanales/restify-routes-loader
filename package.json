@@ -1,6 +1,6 @@
 {
   "name": "restify-routes-loader",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Bulk load your routes",
   "main": "dist/index.js",
   "scripts": {
