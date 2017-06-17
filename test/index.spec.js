@@ -25,24 +25,21 @@ tape('routeLoader', (test) => {
   };
 
   const route = {
-    get: {
-      name: 'index',
-      path: '/',
-      handler,
-    },
-    post: {
-      name: 'another',
-      path: '/',
-      handler,
+    name: 'index',
+    path: '/',
+    handlers: {
+      get: handler,
+      post: handler,
     },
   };
   const routes = [
     route,
     {
-      get: {
-        name: 'secondRoute',
-        path: '/second',
-        handler,
+      name: 'secondRoute',
+      path: '/second',
+      handlers: {
+        get: handler,
+        post: handler,
       },
     },
   ];
@@ -50,14 +47,14 @@ tape('routeLoader', (test) => {
   routeLoader(singleRouteServer).load(route);
 
   test.equals(singleRouteServer.getRoute.name,
-    route.get.name, 'should set single route name');
+    route.name, 'should set single route name');
   test.equals(singleRouteServer.getRoute.path,
-    route.get.path, 'should set single route path');
+    route.path, 'should set single route path');
 
   routeLoader(multipleRouteServer).load(routes);
 
   test.equals(multipleRouteServer.getRoute.name,
-    routes[1].get.name, 'get route should be the latest defined');
+    routes[1].name, 'get route should be the latest defined');
 
   const count = Object.keys(route).length + 1;
   test.equals(multipleRouteServer.count, count,
