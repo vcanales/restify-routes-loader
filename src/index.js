@@ -8,7 +8,7 @@ const Routes = function Routes(server) {
         Object.keys(handlers).forEach((method) => {
           if (methods.indexOf(method) > -1) {
             const handler = handlers[method];
-            const routeObject = { name, path, version };
+            const routeObject = { name: `${name}_${method}`, path, version };
             server[method](routeObject, handler);
           }
         });

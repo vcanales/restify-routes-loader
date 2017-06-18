@@ -17,7 +17,7 @@ var Routes = function Routes(server) {
         Object.keys(handlers).forEach(function (method) {
           if (methods.indexOf(method) > -1) {
             var handler = handlers[method];
-            var routeObject = { name: name, path: path, version: version };
+            var routeObject = { name: name + '_' + method, path: path, version: version };
             server[method](routeObject, handler);
           }
         });
